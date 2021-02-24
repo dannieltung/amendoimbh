@@ -5,12 +5,19 @@
   top: 0;
 }
 
-
 #logo {
   width: 100px;
   position: absolute;
   top: -30px;
   transform: translateX(-50%);
+}
+
+#mob-logo {
+  width: 51px;
+  position: absolute;
+  top: 3px;
+  transform: translateX(50%);
+  right: 90%;
 }
 
 .navbar {

@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
 
   private
 
-  def budget_params
+  def product_params
     params.require(:product).permit(:price, :name, :stock_quantity)
   end
 end

@@ -5,6 +5,7 @@ class BudgetsController < ApplicationController
 
   def create
     @budget = Budget.new(budget_params)
+    @budget.user_id = current_user
     if @budget.save
       redirect_to budget_path(@budget), notice: 'Orçamento criado!'
     else

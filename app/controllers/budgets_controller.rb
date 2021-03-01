@@ -6,10 +6,13 @@ class BudgetsController < ApplicationController
   def create
     @budget = Budget.new(budget_params)
     if @budget.save
-      redirect_to product_path(@budget), notice: 'Orçamento criado!'
+      redirect_to budget_path(@budget), notice: 'Orçamento criado!'
     else
       render :new
     end
+  end
+
+  def show
   end
 
   private

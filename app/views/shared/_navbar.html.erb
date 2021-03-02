@@ -9,62 +9,19 @@
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbar-links">
       <div class="navbar-nav">
-        <a href="./empresa" class="col text-center nav-item nav-link" id="about-menu">Empresa</a>
-        <a href="#" class="col text-center nav-item nav-link" id="products-menu">Produtos</a>
+        <a class="col text-center nav-item nav-link" id="about-menu"><%= link_to 'Início', root_path %></a>
+        <a class="col text-center nav-item nav-link" id="about-menu">Empresa</a>
+        <a class="col text-center nav-item nav-link" id="products-menu"><%= link_to 'Produtos', products_path %></a>
         <a href="#" class="col text-center navbar-brand">
           <%= image_tag "products/uai.png",
             id: "logo" %>
         </a>
-        <a href="#" class="col text-center nav-item nav-link" id="where-menu">Onde estamos</a>
-        <a href="#" class="col text-center nav-item nav-link" id="budget-meu">Orçamentos</a>
+        <a class="col text-center nav-item nav-link" id="where-menu">Onde estamos</a>
+        <a class="col text-center nav-item nav-link" id="budget-meu"><%= link_to "Orçamentos", new_budget_path%></a>
       </div>
     </div>
   </nav>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- <div class="navbar navbar-expand-sm navbar-light navbar-lewagon d-flex justify-content-center">
   <div class="nav-item dropdown navbar-toggler">
     <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

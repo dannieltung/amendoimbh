@@ -1,0 +1,7 @@
+<h1>New Budget Page</h1>
+<%= simple_form_for @budget do |f| %>
+  <%= f.association :product, collection: Product.order('name ASC'), label: 'Produto' %>
+  <%= f.input :quantity, label: 'Quantidade' %>
+  <br>
+  <%= f.submit "Criar", class: 'btn btn-success btn-block' %>
+<% end %>

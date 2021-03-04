@@ -9,15 +9,15 @@
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbar-links">
       <div class="navbar-nav">
-        <a class="col text-center nav-item nav-link" id="about-menu"><%= link_to 'Início', root_path %></a>
-        <a class="col text-center nav-item nav-link" id="about-menu">Empresa</a>
-        <a class="col text-center nav-item nav-link" id="products-menu"><%= link_to 'Produtos', products_path %></a>
-        <a href="#" class="col text-center navbar-brand">
+        <!-- <li class="col text-center nav-item nav-link" id="about-menu"><%= link_to 'Início', root_path %></li> -->
+        <a href="#company" class="col text-center nav-item nav-link">Empresa</a>
+        <li class="col text-center nav-item nav-link"><%= link_to 'Produtos', products_path %></li>
+        <li href="#main" class="col text-center navbar-brand">
           <%= image_tag "products/uai.png",
             id: "logo" %>
-        </a>
-        <a class="col text-center nav-item nav-link" id="where-menu">Onde estamos</a>
-        <a class="col text-center nav-item nav-link" id="budget-meu"><%= link_to "Orçamentos", new_budget_path%></a>
+        </li>
+        <a href="#location" class="col text-center nav-item nav-link">Onde estamos</a>
+        <li class="col text-center nav-item nav-link"><%= link_to "Orçamentos", new_budget_path%></li>
       </div>
     </div>
   </nav>

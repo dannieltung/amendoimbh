@@ -17,10 +17,16 @@
             id: "logo" %>
         </a>
         <a class="col text-center nav-item nav-link" id="where-menu">Onde estamos</a>
-        <a class="col text-center nav-item nav-link" id="budget-meu"><%= link_to "Orçamentos", new_budget_path%></a>
+        <a class="col text-center nav-item nav-link" id="budget-meu"><%= link_to "Orçamentos", new_budget_path, remote: true %></a>
       </div>
     </div>
   </nav>
+</div>
+<div class="modal fade" id="budgetModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    </div>
+  </div>
 </div>
 <!-- <div class="navbar navbar-expand-sm navbar-light navbar-lewagon d-flex justify-content-center">
   <div class="nav-item dropdown navbar-toggler">

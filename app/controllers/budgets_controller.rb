@@ -5,12 +5,13 @@ class BudgetsController < ApplicationController
 
   def create
     @budget = Budget.new(budget_params)
-    @budget.user_id = current_user
-    if @budget.save
-      redirect_to budget_path(@budget), notice: 'Orçamento criado!'
-    else
-      render :new
-    end
+    @budget.user = current_user
+    @budget.save
+    # if @budget.save
+    #   redirect_to root_path, notice: 'Orçamento criado!'
+    # else
+    #   render :new
+    # end
   end
 
   def show
@@ -19,7 +20,7 @@ class BudgetsController < ApplicationController
   private
 
   def budget_params
-    params.require(:budget).permit(:user_id, :product_id, :quantity)
+    params.require(:budget).permit(:product_id, :quantity)
   end
 
 end

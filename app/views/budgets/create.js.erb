@@ -1,0 +1,5 @@
+<% if @budget.errors.any? %>
+  $('#budgetModal .modal-content').html('<%= j render "budgets/modal", budget: @budget %>');
+<% else %>
+  $('#budgetModal').modal('hide');
+<% end %>

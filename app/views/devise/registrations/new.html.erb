@@ -6,14 +6,19 @@
       <div class="form-inputs">
         <%= f.input :first_name,
                     autofocus: true,
-                    placeholder: 'First Name',
+                    placeholder: 'Nome',
                     label: false,
-                    input_html: { autocomplete: "first_name" }%>
+                    input_html: { autocomplete: "nome" }%>
         <%= f.input :last_name,
                     autofocus: true,
-                    placeholder: 'Last Name',
+                    placeholder: 'Sobrenome',
                     label: false,
-                    input_html: { autocomplete: "last_name" }%>
+                    input_html: { autocomplete: "sobrenome" }%>
+        <%= f.input :cnpj,
+                    autofocus: true,
+                    placeholder: 'CNPJ',
+                    label: false,
+                    input_html: { autocomplete: "cnpj" }%>
         <%= f.input :email,
                     required: true,
                     placeholder: 'E-mail',

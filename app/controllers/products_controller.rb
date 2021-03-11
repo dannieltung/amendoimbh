@@ -9,8 +9,9 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    @product.user = current_user
     if @product.save
-      redirect_to product_path(@product), notice: 'Produto criado!'
+      redirect_to root_path, notice: 'Produto criado!'
     else
       render :new
     end

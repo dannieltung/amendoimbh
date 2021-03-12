@@ -23,24 +23,28 @@
 
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" >
-      <%= link_to "Empresa", "#", class: "dropdown-item" %>
-      <%= link_to "Produtos", "#", class: "dropdown-item" %>
-      <%= link_to "Onde estamos", "#", class: "dropdown-item" %>
-      <%= link_to "Orçamentos", "#", class: "dropdown-item" %>
-    </div>
 
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" >
+
+        <%= link_to "Empresa", "#", class: "dropdown-item" %>
+        <%= link_to "Produtos", "#", class: "dropdown-item" %>
+        <%= link_to "Onde estamos", "#", class: "dropdown-item" %>
+        <%= link_to "Orçamentos", "#", class: "dropdown-item" %>
+
+    </div>
 
     <div class="collapse navbar-collapse justify-content-center" id="navbar-links">
       <div class="navbar-nav">
-        <!-- <li class="col text-center nav-item nav-link" id="about-menu"><%= link_to 'Início', root_path %></li> -->
-        <a href="#company" class="col text-center nav-item nav-link">Empresa</a>
-        <li class="col text-center nav-item nav-link"><%= link_to 'Produtos', products_path %></li>
-        <li href="#main" class="col text-center navbar-brand">
-          <%= link_to image_tag("products/logo-02.png", id: "logo"), root_path %>
-        </li>
-        <a href="#location" class="col text-center nav-item nav-link">Onde estamos</a>
-        <li class="col text-center nav-item nav-link"><%= link_to "Orçamentos", new_budget_path%></li>
+        <div class="nav_menu">
+          <!-- <li class="col text-center nav-item nav-link" id="about-menu"><%= link_to 'Início', root_path %></li> -->
+          <a href="#company" class="col text-center nav-item nav-link">Empresa</a>
+          <li class="col text-center nav-item nav-link"><%= link_to 'Produtos', products_path %></li>
+          <li href="#main" class="col text-center navbar-brand">
+            <%= link_to image_tag("products/logo-02.png", id: "logo"), root_path %>
+          </li>
+          <a href="#location" class="col text-center nav-item nav-link">Onde estamos</a>
+          <li class="col text-center nav-item nav-link"><%= link_to "Orçamentos", new_budget_path%></li>
+        </div>
       </div>
     </div>
   </nav>

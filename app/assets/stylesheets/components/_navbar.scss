@@ -3,10 +3,11 @@
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 1;
 }
 
 #logo {
-  width: 100px;
+  width: 120px;
   position: absolute;
   top: -30px;
   transform: translateX(-50%);
@@ -62,8 +63,12 @@
 }
 
 .nav_menu {
-  font-size: 15px;
-
+  font-size: 24px;
+  display: flex;
+  flex-grow: 1;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
 

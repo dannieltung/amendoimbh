@@ -1,7 +1,7 @@
 <% @products.each do |product| %>
   <h2>
-    <p>Produto: <%= product.name %></p>
+    <p>Produto:<%= product.name %></p>
   </h2>
-  <p>Preço: <%= number_to_currency(product.price, separator: ',') %></p>
-  <p>Quantidade em Estoque: <%= product.stock_quantity %></p>
+  <p>Preço:<%= number_to_currency(product.price, separator: ',') %></p>
+  <p>Quantidade em Estoque:<%= product.stock_quantity %></p>
 <% end %>

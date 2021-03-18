@@ -7,14 +7,15 @@ class BudgetsController < ApplicationController
     @budget = Budget.new(budget_params)
     @budget.user = current_user
     @budget.save
+    redirect_to budget_path(@budget), notice: 'Orçamento criado!'
     # if @budget.save
-    #   redirect_to root_path, notice: 'Orçamento criado!'
     # else
     #   render :new
     # end
   end
 
   def show
+    @budget = Budget.find(params[:id])
   end
 
   private

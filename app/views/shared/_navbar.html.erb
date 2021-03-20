@@ -1,42 +1,31 @@
 <div id="nav-container">
   <nav class="navbar navbar-expand-sm navbar-light">
-
-    <li href="#" class="navbar-brand navbar-toggler">
+    <li href="#" class="navbar-brand">
       <%= link_to image_tag("products/logo-02.png", id: "mob-logo"), root_path %>
     </li>
-
-    <!-- codigo do dropdpown da internet -->
-<!--
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <span class="navbar-toggler-icon"></span>
-      </a>
-      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-    </li>
- -->
-    <button class="navbar-toggler nav-item dropdown" type="button" data-toggle="collapse" data-target="navbar-links" aria-controls="navbar-links" aria-expanded="false" arial-label="Toggle navigation">
-
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" arial-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" >
-
-        <%= link_to "Empresa", "#", class: "dropdown-item" %>
-        <%= link_to "Produtos", "#", class: "dropdown-item" %>
-        <%= link_to "Onde estamos", "#", class: "dropdown-item" %>
-        <%= link_to "Orçamentos", "#", class: "dropdown-item" %>
-
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav_menu">
+          <a href="#company" class="col text-center nav-item nav-link">Empresa</a>
+        </li>
+        <li class="nav_menu">
+          <a href="#product" class="col text-center nav-item nav-link">produtos</a>
+        </li>
+        <li class="nav_menu">
+          <a href="#location" class="col text-center nav-item nav-link">Onde Estamos</a>
+        </li>
+        <li class="nav_menu">
+          <a href="#contact" class="col text-center nav-item nav-link">Contato</a>
+        </li>
+      </ul>
     </div>
-
-    <div class="collapse navbar-collapse justify-content-center" id="navbar-links">
+    <!-- <div class="collapse navbar-collapse justify-content-center" id="navbar-links">
       <div class="navbar-nav">
         <div class="nav_menu">
-          <!-- <li class="col text-center nav-item nav-link" id="about-menu"><%= link_to 'Início', root_path %></li> -->
+          <li class="col text-center nav-item nav-link" id="about-menu"><%= link_to 'Início', root_path %></li>
           <a href="#company" class="col text-center nav-item nav-link">Empresa</a>
           <li class="col text-center nav-item nav-link"><%= link_to 'Produtos', products_path %></li>
           <li href="#main" class="col text-center navbar-brand">
@@ -46,56 +35,38 @@
           <li class="col text-center nav-item nav-link"><%= link_to "Orçamentos", new_budget_path%></li>
         </div>
       </div>
-    </div>
+    </div> -->
   </nav>
 </div>
-<div class="modal fade" id="budgetModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-    </div>
-  </div>
-</div>
-<!-- <div class="navbar navbar-expand-sm navbar-light navbar-lewagon d-flex justify-content-center">
-  <div class="nav-item dropdown navbar-toggler">
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-        <%= link_to "Empresa", "#", class: "dropdown-item" %>
-        <%= link_to "Produtos", "#", class: "dropdown-item" %>
-        <%= link_to "Orçamento", "#", class: "dropdown-item" %>
-        <%= link_to "Onde encontrar", "#", class: "dropdown-item" %>
-      </div>
-  </div>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
+<!-- <div class="container">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <li href="#" class="navbar-brand navbar-toggler">
+      <%= link_to image_tag("products/logo-02.png", id: "mob-logo"), root_path %>
+    </li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" arial-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <%= link_to "Empresa", "#", class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Produtos", "#", class: "nav-link" %>
         </li>
-        <%= link_to root_path, class: "navbar-brand" do %>
-          <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-        <% end %>
         <li class="nav-item">
           <%= link_to "Orçamento", "#", class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Onde encontrar", "#", class: "nav-link" %>
         </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
+      </ul>
+    </div>
+  </div>
+</div> -->
+<!-- <div class="modal fade" id="budgetModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    </div>
   </div>
 </div> -->

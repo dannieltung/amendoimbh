@@ -75,6 +75,7 @@ GEM
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
     childprocess (3.0.0)
+    cicero (0.0.1)
     coderay (1.1.3)
     concurrent-ruby (1.1.8)
     crass (1.0.6)
@@ -239,6 +240,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
+  cicero
   devise
   dotenv-rails
   font-awesome-sass
@@ -265,4 +267,4 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
-   2.1.4
+   2.2.11

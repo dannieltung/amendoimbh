@@ -6,9 +6,29 @@
 
 
 body {
-  background-image: image-url('background/background-01.png');
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   padding-top: 170px !important;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: image-url('background/background-01.png');
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.5;
+    z-index: -5;
+  }
 }
+// img {
+//   opacity: 0.1;
+// }
 
 .row {
   background-color: white;
@@ -24,5 +44,9 @@ body {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
+}
+
+.card-info{
+  max-width: 100%;
 }
 

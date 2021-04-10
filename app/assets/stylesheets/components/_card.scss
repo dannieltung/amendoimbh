@@ -1,10 +1,20 @@
 .photo-card {
-  background-color: white;
+  background-color: orange;
   display: flex;
   justify-content: flex-end;
 }
 
+.image {
+  height: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+
+}
+
+
 .text-card {
-  // background-color: #e0bcaffa;
-  // vertical-align: baseline;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
 }
